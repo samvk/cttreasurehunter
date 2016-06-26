@@ -1,0 +1,39 @@
+// ==========================================================================
+// BASE RULES
+// ==========================================================================//
+
+//Text highlighting
+@include selection(null, $lightgold);
+
+//headers
+h1, h2, h3, h4, h5, h6 {
+    @extend .text-center;
+    font-weight: $font-weight--bold;
+    color: $lightblack;
+}
+
+h1, h2 {
+    @extend .uppercase;
+}
+
+.sub-title {
+    @extend .text-center;
+}
+
+.section__title {
+    margin-bottom: .5em;
+}
+
+//text
+p {
+    color: $mediumgrey;
+}
+
+//anchor
+a {
+    color: $lightgold;
+    
+    @include hover($gold) {
+        text-decoration: underline;
+    }
+}

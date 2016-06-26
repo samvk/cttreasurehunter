@@ -1,0 +1,135 @@
+// ==========================================================================
+// NAVBAR
+// ==========================================================================//
+
+nav {
+    font-size: 1rem;
+    @include palette($white, $mediumblack);
+    
+    width: 100%;
+    @include padding-top-bottom(.6rem);
+    
+    a {
+        @include hover(){
+            text-decoration: none !important;
+        }
+    }
+}
+
+.nav__logo {
+    font-family: $font-family--logo;
+    
+    @include transition(font-size 200ms linear);
+    font-size: 1.7em;
+}
+
+.nav-list {
+    display: none; //default collapsed
+    @extend .no-spacing;
+    @extend .list--no-spacing;
+}
+
+.nav-list__item {
+    &:first-child {
+        border-top: 1px solid $black;
+        margin-top: 0.6rem;
+        padding-top: 0.6rem;
+    }
+}
+
+.nav-list__item--a {
+    width: 100%;
+    @include padding-left-right(.6em);
+
+    color: $white;
+    font-family: $font-family--primary;
+    text-transform: uppercase;
+    
+    @include line-height(2.4em);
+}
+
+.nav__hamburger {
+    padding: 4px 9px;
+    border-radius: 5px;
+    background-color: $gold;
+    
+    cursor: pointer;
+}
+
+//nav state
+
+.nav-list__item--a.is-highlighted {
+    color: $white;
+    background-color: $gold;
+}
+
+//for desktop layout
+@include media($sm-min, "min") {
+    
+    nav {
+        overflow: hidden;
+        @include transition(background-color 200ms linear);
+        background-color: transparent;
+    }
+    
+    .nav__container {
+        @include transition(height 200ms linear);
+        height: 5em;
+    }
+    
+    .nav__logo, .nav-list {
+        //vertically center
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .nav__logo {
+        left: 0;
+    }
+
+    .nav-list {
+        right: 0;
+        display: block !important; //override slideToggle()
+        
+        margin-top: 0em;
+    }
+
+    .nav-list__item {
+        display: inline-block !important; //override slideToggle()
+        
+        margin-right: 1em;
+
+        &:first-child {
+            border: 0;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;  
+        }
+    }
+    
+    .nav-list__item--a {
+        border-radius: 4px;
+    }
+    
+    .nav__hamburger {
+        display: none;
+    }
+    
+    //shrinking nav on scroll
+    nav.is-small {
+        
+        background-color: $mediumblack;
+        
+        .nav__container {
+            height: 3em;
+        }
+
+        .nav__logo {
+            font-size: 1.4em;
+        }
+    }
+}

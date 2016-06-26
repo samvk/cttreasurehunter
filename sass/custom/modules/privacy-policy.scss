@@ -1,0 +1,51 @@
+// ==========================================================================
+// PRIVACY POLICY
+// ==========================================================================//
+
+$padding: 3rem;
+
+#privacy-policy {
+    z-index: $z-overlay;
+    
+    @include palette($black, $offwhite);
+    
+    @include hr($lightblack);
+
+	@extend .center-abs;
+	top: 5rem;
+	width: 90%;
+	max-width: 1000px;
+	max-height: 500px;
+	max-height: 85%;
+	overflow-y: auto;
+	padding: $padding;
+
+	border: 2px solid $lightgrey;
+	border-radius: 1.2em;
+
+	visibility: visible;
+	opacity: 1;
+	@include transition(all 180ms linear);
+}
+
+#privacy-policy.is-hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.privacy-policy__container {
+    max-width: 720px;
+}
+
+.privacy-policy__close-icon {
+	top: $padding * 0.5;
+	right: $padding * 0.5;
+	@include hover($trueblack);
+	cursor: pointer;
+}
+
+.privacy-policy__list {
+    margin-left: 2em;
+    
+    list-style: disc;
+}

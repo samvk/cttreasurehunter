@@ -1,0 +1,44 @@
+// ==========================================================================
+// FONT SIZES
+// ==========================================================================//
+
+html {
+	font-size: $font-size--base;
+	line-height: 1.4;
+	
+	@include media($xs) {
+		font-size: $font-size--base * 0.8;
+	}
+}
+
+.h1 { 
+	font-size: 4.7em;
+	
+	@include media ($xs) {
+		font-size: 3.8em;
+	}
+}
+.h2 { 
+	font-size: 2.9em;
+
+	@include media ($xs) {
+		font-size: 2.5em;
+	}
+}
+.h3 { font-size: 2em; }
+.h4 { font-size: 1.7em; }
+.h5 { font-size: 1.4em; }
+.h6 { font-size: .75em; }
+
+p,
+blockquote,
+li,
+.button {
+	font-size: 1em;
+}
+
+input,
+textarea,
+select {
+    font-size: .8em;
+}

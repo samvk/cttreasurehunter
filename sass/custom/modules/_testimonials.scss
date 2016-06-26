@@ -1,0 +1,50 @@
+// ==========================================================================
+// TESTIMONIALS
+// ==========================================================================//
+
+#testimonials {
+    //allow container to be translated to the right.
+    overflow: hidden;
+}
+
+.testimonial__container {
+    //center testimonies on desktop
+	@include media($md-min, "min") {
+        //16.667 is the image length
+        transform: translateX(50% - 16.667/2);
+	}
+}
+
+.testimony {
+	padding-bottom: 4.5em;
+}
+
+.testimony__line {
+	position: absolute;
+	@extend .center-abs;
+	background-color: $lightgrey;
+
+	top: 40%;
+	width: 3px;
+	//height plus padding
+	height: calc(150% + 4.5em);
+}
+
+.testimony__quote {
+    margin-top: 1em;
+    text-align: justify;
+}
+
+.testimony__quote--name {
+    @extend .bold;
+    font-size: 1.15em;
+    color: $lightblack;
+}
+
+.testimony__pic {
+    @extend .circle;
+	border: 6px solid $lightgrey;
+	
+	position: relative;
+	z-index: $z-pseudo;
+}

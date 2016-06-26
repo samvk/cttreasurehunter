@@ -1,0 +1,18 @@
+// ==========================================================================
+// FOOTER RULES
+// ==========================================================================//
+
+footer {
+	@include palette($white, $mediumblack);
+	font-size: 1.3rem;
+}
+
+.footer__item {
+	@extend .nowrap;
+	
+	@include line-height(3em);
+	
+    @include media($xs) {
+        text-align: center;
+    }
+}

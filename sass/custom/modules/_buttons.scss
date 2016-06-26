@@ -1,0 +1,21 @@
+// ==========================================================================
+// BUTTON RULES
+// ==========================================================================//
+
+.button__container {
+    text-align: center;
+}
+
+.button {
+    font-size: 1.2em;
+    
+    @include palette($white, $lightgold);
+    @include hover($white, $gold);
+    
+    padding: 1em 2em;
+    
+    font-family: $font-family--primary;
+    font-weight: $font-weight--bold;
+    @extend .uppercase;
+    border-radius: 3px;
+}

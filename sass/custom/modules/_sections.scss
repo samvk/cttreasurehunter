@@ -1,0 +1,16 @@
+// ==========================================================================
+// SECTIONS and ARTICLES
+// ==========================================================================//
+
+section {
+    @include padding-top-bottom(em(140px));
+	
+	@include media ($xs) {
+		@include padding-top-bottom(em(100px));
+	}
+}
+
+//section zebra background-coloring
+section:nth-child(odd) {
+    background-color: $offwhite;
+}

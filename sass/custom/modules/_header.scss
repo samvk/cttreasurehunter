@@ -1,0 +1,27 @@
+// ==========================================================================
+// HEADER
+// ==========================================================================//
+
+header {    
+    padding-top: em(280px);
+	
+	@include media ($xs) {
+        padding-top: em(140px);
+	}
+    
+    height: 100vh;
+    min-height: 500px;
+	
+    background: #A77A40 url("../img/header.png") center;
+}
+
+.header__title {
+    color: $gold;
+}
+
+.header__sub-title {
+    @extend .sub-title;
+    color: $white;
+    font-family: $font-family--cursive;
+    
+}

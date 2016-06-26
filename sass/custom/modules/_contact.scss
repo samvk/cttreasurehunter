@@ -1,0 +1,91 @@
+// ==========================================================================
+// CONTACT
+// ==========================================================================//
+
+#contact {
+    @include padding-top-bottom(em(150px));
+	
+	@include media ($xs) {
+		@include padding-top-bottom(em(100px));
+	}
+	
+    background: #CF9457 url("../img/contact.png") center;
+    
+    //so allow section to be scrolled to smoothly
+    @include media($md-min, "min") {
+        min-height: 900px;
+    }
+}
+
+.contact__title {
+    @extend .section__title;
+    color: $white;
+}
+
+
+$input__height: 3.8em;
+$input__margin-bottom: 2em;
+
+input, textarea, select {
+    width: 100%;
+    padding-left: 4px;
+    margin-bottom: $input__margin-bottom;
+    
+    @extend .rounded;
+    border: 1px solid #C6C6C6;
+}
+
+input, select {
+    height: $input__height;
+}
+
+textarea {
+    padding-top: .5em; //match top padding of input fields
+    height: 2 * ($input__height + $input__margin-bottom) - $input__margin-bottom;
+}
+
+.input__placeholder {
+    position: absolute;
+    
+    font-size: .9em;
+    font-weight: $font-weight--bold;
+    color: $white;
+    text-shadow: 2px 2px 3px $black;
+    
+    @include transition(opacity 500ms, transform 500ms);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0%);
+}
+
+.input__placeholder.is-focused {
+    visibility: visible;
+    opacity: 1.0;
+    transform: translateY(-100%);
+}
+
+//Form states
+
+.form--is-disabled {
+    background: $offwhite;
+}
+
+//Form responses
+
+%message {
+    padding-top: .7em;
+    color: $gold;
+    text-shadow: 1px 2px 1px $trueblack;
+}
+
+form .success {
+    @extend %message;
+    font-size: 1.8em;
+    color: $gold;
+}
+
+form .error {
+    @extend %message;
+    font-size: 1.2em;
+    color: red;
+}
