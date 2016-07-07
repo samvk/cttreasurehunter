@@ -3,48 +3,57 @@
 // ==========================================================================//
 
 #testimonials {
-    //allow container to be translated to the right.
-    overflow: hidden;
+    //layout
+    overflow: hidden; //allow container to be translated to the right.
 }
 
 .testimonial__container {
+    
     //center testimonies on desktop
 	@include media($md-min, "min") {
-        //16.667 is the image length
-        transform: translateX(50% - 16.667/2);
+        //layout
+        transform: translateX(50% - 16.667/2); //16.667 is the image length
 	}
 }
 
 .testimony {
+    //layout
 	padding-bottom: 4.5em;
 }
 
 .testimony__line {
+    //design
+    background-color: $lightgrey;
+    
+    //layout
 	position: absolute;
 	@extend .center-abs;
-	background-color: $lightgrey;
-
 	top: 40%;
 	width: 3px;
-	//height plus padding
-	height: calc(150% + 4.5em);
+    height: calc(150% + 4.5em); //height plus padding
 }
 
 .testimony__quote {
-    margin-top: 1em;
+    //layout
     text-align: justify;
+    margin-top: 1em;
 }
 
 .testimony__quote--name {
-    @extend .bold;
+    //text
     font-size: 1.15em;
+    @extend .bold;
+
+    //design
     color: $lightblack;
 }
 
 .testimony__pic {
+    //design
     @extend .circle;
 	border: 6px solid $lightgrey;
 	
+    //layout
+    z-index: $z-pseudo;
 	position: relative;
-	z-index: $z-pseudo;
 }

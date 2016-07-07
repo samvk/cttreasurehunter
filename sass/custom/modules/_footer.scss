@@ -3,16 +3,20 @@
 // ==========================================================================//
 
 footer {
+    //text
+    font-size: 1.3rem;
+
+    //design
 	@include palette($white, $mediumblack);
-	font-size: 1.3rem;
 }
 
 .footer__item {
-	@extend .nowrap;
-	
-	@include line-height(3em);
+    //text
+    @include line-height(3em);
+    @extend .nowrap;
 	
     @include media($xs) {
+        //layout
         text-align: center;
     }
 }

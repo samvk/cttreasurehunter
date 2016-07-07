@@ -3,14 +3,17 @@
 // ==========================================================================//
 
 section {
+    //layout
     @include padding-top-bottom(em(140px));
 	
 	@include media ($xs) {
+        //layout
 		@include padding-top-bottom(em(100px));
 	}
 }
 
 //section zebra background-coloring
 section:nth-child(odd) {
+    //design
     background-color: $offwhite;
 }

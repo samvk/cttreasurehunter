@@ -1,0 +1,94 @@
+// ==========================================================================
+// CONTACT FORM
+// ==========================================================================//
+
+$input__height: 3.8em;
+$input__margin-bottom: 2em;
+
+input, textarea, select {
+    //design
+    @extend .rounded;
+    border: 1px solid #C6C6C6;
+    
+    //layout
+    width: 100%;
+    padding-left: 4px;
+    margin-bottom: $input__margin-bottom;
+}
+
+input, select {
+    //layout
+    height: $input__height;
+}
+
+textarea {
+    //layout
+    padding-top: .5em; //match top padding of input fields
+    height: 2 * ($input__height + $input__margin-bottom) - $input__margin-bottom;
+}
+
+.input__placeholder {
+    //text
+    font-size: .9em;
+    font-weight: $font-weight--bold;
+
+    //design
+    color: $white;
+    text-shadow: 2px 2px 3px $black;
+    visibility: hidden;
+    opacity: 0;
+
+    //layout
+    position: absolute;
+    transform: translateY(0%);
+    
+    //transitions
+    @include transition(opacity 500ms, transform 500ms);
+}
+
+.input__placeholder.is-focused {
+    //design
+    visibility: visible;
+    opacity: 1.0;
+    
+    //layout
+    transform: translateY(-100%);
+}
+
+//Form states
+
+.form--is-disabled {
+    //design
+    background: $offwhite;
+}
+
+//Form responses
+
+%message {
+    //design
+    color: $gold;
+    text-shadow: 1px 2px 1px $trueblack;
+
+    //layout
+    padding-top: .7em;
+}
+
+form .success {
+    @extend %message;
+    
+    //text
+    font-size: 1.8em;
+    
+    //design
+    color: $gold;
+}
+
+form .error {
+    @extend %message;
+    
+    //text
+    font-size: 1.2em;
+    
+    //design
+    color: red;
+}

@@ -3,13 +3,14 @@
 // ==========================================================================//
 
 .service {
+    //layout
     @extend .center-content;
-    
     margin-bottom: em(20px);
 }
 
 .service__button {
     @extend .button;
     
+    //layout
     margin-top: .5em;
 }

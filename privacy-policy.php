@@ -15,7 +15,7 @@
             <li>We will make readily available to customers information about our policies and practices relating to the management of personal information.</li>
         </ul>
 
-        <p>We are committed to conducting DateRussell in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.</p>
+        <p>We are committed to conducting The Treasure Hunter in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.</p>
 
         <button class="center privacy-policy__close-button">Close</button>
     </div>

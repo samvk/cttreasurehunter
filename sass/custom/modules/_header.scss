@@ -2,26 +2,31 @@
 // HEADER
 // ==========================================================================//
 
-header {    
-    padding-top: em(280px);
-	
-	@include media ($xs) {
-        padding-top: em(140px);
-	}
-    
-    height: 100vh;
-    min-height: 500px;
-	
+header {
+    //design
     background: #A77A40 url("../img/header.png") center;
+
+    //layout
+    @include padding-top-bottom(em(320px));
+    min-height: 100vh;
+
+	@include media ($xs) {
+        //layout
+        @include padding-top-bottom(em(130px));
+	}
 }
 
 .header__title {
+    //design
     color: $gold;
 }
 
 .header__sub-title {
     @extend .sub-title;
-    color: $white;
+
+    //text
     font-family: $font-family--cursive;
-    
+
+    //design
+    color: $white;
 }

@@ -24,28 +24,32 @@
 
 	<nav class="fixed">
 		<div class="container">
-			<div class="col-12 nav__container">
-                <div class="nav__logo">
-                    <a class="autoscroll" href="#page-top">The Treasure Hunter</a>
-                    <span class="right fa fa-bars nav__hamburger"></span>
+            <div class="row">
+                <div class="col-12 nav__container">
+                    <div class="nav__logo">
+                        <a class="autoscroll" href="#page-top">The Treasure Hunter</a>
+                        <span class="right fa fa-bars nav__hamburger"></span>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="nav-list__item"><a class="autoscroll nav-list__item--a" href="#about">About</a></li>
+                        <li class="nav-list__item"><a class="autoscroll nav-list__item--a" href="#services">Services</a></li>
+                        <li class="nav-list__item"><a class="autoscroll nav-list__item--a" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-list__item"><a class="autoscroll nav-list__item--a" href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-                <ul class="nav-list">
-                    <li class="nav-list__item"><a class="autoscroll nav-list__item--a" href="#about">About</a></li>
-                    <li class="nav-list__item"><a class="autoscroll nav-list__item--a" href="#services">Services</a></li>
-                    <li class="nav-list__item"><a class="autoscroll nav-list__item--a" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-list__item"><a class="autoscroll nav-list__item--a" href="#contact">Contact</a></li>
-                </ul>
-			</div>
+            </div>
 		</div>
 	</nav>
 	
 	<header>
 		<div class="container">
-            <div class="col-12 center-content">
-				<h1 class="header__title">The Treasure Hunter</h1>
-                <p class="h3 italic header__sub-title">Metal Detector Operator for Hire</p>
-                <a class="autoscroll button" href="#services">Show more</a>
-			</div>
+            <div class="row">
+                <div class="col-12 center-content">
+                    <h1 class="header__title">The Treasure Hunter</h1>
+                    <p class="h3 italic header__sub-title">Metal Detector Operator for Hire</p>
+                    <a class="autoscroll button" href="#services">Show more</a>
+                </div>
+            </div>
 		</div>
 	</header>
 	
@@ -104,8 +108,10 @@
 	<section id="testimonials">
         
         <div class="container">
-            <div class="col-12">
-                <h2 class="section__title">Testimonials</h2>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section__title">Testimonials</h2>
+                </div>
             </div>
         </div>
         
@@ -196,7 +202,7 @@
 
             <div class="row">
 
-                <form id="contact-form" action="php/mail.php" method="post">
+                <form id="contact-form" action="php/contact.php" method="post">
                     <div class="col-md-6">
                         <label>
                             <span class="input__placeholder">Name</span>
@@ -282,7 +288,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 	<!-- Javascript -->
-	<script src="js/mail.js"></script>
+	<script src="js/contact.js"></script>
 	<script src="js/script.js"></script>
 
 </body>
