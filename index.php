@@ -6,11 +6,17 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="Sam Kauffman">
     <meta name="description" content="The metal detector operator for hire.">
-	<meta name="author" content="Sam Kauffman">
+    <meta name="theme-color" content="#FDC401">
 
 	<title>The Treasure Hunter</title>
-	<link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#FDC401">
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -44,7 +50,7 @@
 	<header>
 		<div class="container">
             <div class="row">
-                <div class="col-12 center-content">
+                <div class="col-12 header__content">
                     <h1 class="header__title">The Treasure Hunter</h1>
                     <p class="h3 italic header__sub-title">Metal Detector Operator for Hire</p>
                     <a class="autoscroll button" href="#services">Show more</a>
@@ -57,7 +63,7 @@
 		<div class="container">
 			<div class="col-sm-8 center center-content">
                 <h2 class="section__title">About</h2>
-				<img src="img/coil.png" alt="">
+                <a href="metaldetecting/"><img class="metal-detecting__pic" src="img/coil.png" alt=""></a>
 				<p>
 					If you’re in search of a lost ring, hidden treasure, or anything buried underground, you’ve come to the right place! We’re here to help you find what you thought was lost forever. We provide metal detecting services for the state of Connecticut purely on a reward system, and the cost of gas.
 				</p>
@@ -183,7 +189,6 @@
                         <span class="testimony__quote--name">—Laura B</span>
                     </p>
                 </div>
-            </div>
             </div>
             
         </div>

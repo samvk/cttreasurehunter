@@ -59,7 +59,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-.button, button, .service__button, a, nav a, .privacy-policy__close-icon {
+.button, button, .service__button, a, nav a, .metal-detecting__pic, .privacy-policy__close-icon {
   -moz-transition: color 150ms linear, background-color 150ms linear;
   -o-transition: color 150ms linear, background-color 150ms linear;
   -webkit-transition: color 150ms linear, background-color 150ms linear;
@@ -1161,7 +1161,7 @@ nav {
   border-radius: 5px;
 }
 
-.circle, .testimony__pic {
+.circle, .metal-detecting__pic, .testimony__pic {
   border-radius: 50%;
 }
 
@@ -1523,16 +1523,26 @@ nav a:hover, nav a:active {
   }
 }
 header {
-  background: #A77A40 url("../img/header.png") center;
+  background: #A77A40 url("../img/header.png") center/cover;
+  position: relative;
   padding-top: 20em;
   padding-bottom: 20em;
   min-height: 100vh;
 }
 @media screen and (max-width: 767px) {
   header {
-    padding-top: 8.125em;
-    padding-bottom: 8.125em;
+    padding-top: 6.875em;
+    padding-bottom: 33.75em;
   }
+}
+
+.header__content {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 10em;
 }
 
 .header__title {
@@ -1542,6 +1552,21 @@ header {
 .header__sub-title {
   font-family: "Droid Serif", Helvetica, Arial, cursive;
   color: #fff;
+}
+
+.metal-detecting__pic {
+  opacity: 1;
+  box-shadow: 10px 10px 5px -9px #888888;
+  transform: translate(0, 0);
+  -moz-transition: all 180ms ease;
+  -o-transition: all 180ms ease;
+  -webkit-transition: all 180ms ease;
+  transition: all 180ms ease;
+}
+.metal-detecting__pic:hover, .metal-detecting__pic:active {
+  opacity: 0.9;
+  box-shadow: 9px 10px 5px -9px #888888;
+  transform: translate(1px, 1px);
 }
 
 .service {
