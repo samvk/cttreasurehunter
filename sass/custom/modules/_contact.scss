@@ -8,8 +8,12 @@
     
     //layout
     @include padding-top-bottom(em(150px));
-    min-height: 100vh;
-    
+    min-height: 667px;
+    height: 100vh;
+
+    //transitions
+    @include transition(height 500ms linear); //bandaid for know issue where collapsing address bar changes viewport height on mobile
+
 	@include media ($xs) {
         //layout
 		@include padding-top-bottom(em(100px));

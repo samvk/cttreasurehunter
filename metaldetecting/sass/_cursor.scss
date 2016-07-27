@@ -6,10 +6,11 @@
     //design
     background: url(../img/cursor.png) no-repeat center;
     opacity: 1;
-    visibility: hidden;//cursor only visible inside sandbox
+    visibility: hidden; //cursor only visible inside sandbox
 
     //layout
     position: absolute;
+    transform: translate(-50%, -50%); //cursor shake
     z-index: 100;
 
     width: 256px;
@@ -18,7 +19,7 @@
     @media screen and (max-width: 767px) {
         //design
         background-size: 128px;
-        opacity: 0;//cursor fadesInOut on mobile only
+        opacity: 0; //cursor fadesInOut on mobile only
     }
 }
 
@@ -30,17 +31,16 @@
 }
 
 .cursor.is-searching {
-    transform: translate(0); //cursor shake
     animation: shake 600ms cubic-bezier(.36,.07,.19,.97) both, fade 600ms normal;
 }
 
 //cursor shake
 @include keyframes(shake) {
     30%, 70% {
-        @include transform(translate(-12px));
+        transform: translate(calc(-50% - 12px), -50%);
     }
     50% {
-        @include transform(translate(12px));
+        transform: translate(calc(-50% + 12px), -50%);
     }
 }
 

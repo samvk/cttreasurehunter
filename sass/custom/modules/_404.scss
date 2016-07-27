@@ -1,0 +1,42 @@
+._404 {
+    //base font-size
+    font-size: 1.5rem;
+
+    //design
+    background: #A77A40 url("/img/contact.png") top center;
+}
+
+._404__container {
+    //text
+    font-size: 1em;
+    
+    //design
+    @extend .text-center;
+    @extend .no-spacing;
+
+    //layout
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+._404__title {
+    //design
+    color: $gold;
+}
+
+._404__subtitle {
+    //design
+    color: white;
+    font-style: italic;
+}
+
+._404__button {
+    @extend .button;
+    
+    //text
+    font-size: 1em;
+    white-space: nowrap;
+}

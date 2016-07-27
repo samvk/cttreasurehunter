@@ -85,86 +85,89 @@ nav {
 //for desktop layout
 @include media($sm-min, "min") {
     
-    nav {
-        //design
-        background-color: transparent;
-        overflow: hidden;
+    .home {
 
-        //transitions
-        @include transition(background-color 200ms linear);
-    }
-    
-    .nav__container {
-        //layout
-        height: 5em;
-
-        //transitions
-        @include transition(height 200ms linear);
-    }
-    
-    .nav__logo, .nav-list {
-        //layout
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .nav__logo {
-        //layout
-        left: 0;
-    }
-
-    .nav-list {
-        //layout
-        display: block !important; //override slideToggle()
-
-        right: 0;        
-        margin-top: 0em;
-    }
-
-    .nav-list__item {
-        //design
-        display: inline-block !important; //override slideToggle()
-        margin-right: 1em;
-
-        &:first-child {
+        nav {
             //design
-            border: 0;
-            
-            //layout
-            padding-top: 0;
-            margin-top: 0;
+            background-color: transparent;
+            overflow: hidden;
+
+            //transitions
+            @include transition(background-color 200ms linear);
         }
 
-        &:last-child {
-            //layout
-            margin-right: 0;  
-        }
-    }
-    
-    .nav-list__item--a {
-        //design
-        border-radius: 4px;
-    }
-    
-    .nav__hamburger {
-        //layout
-        display: none;
-    }
-    
-    //shrinking nav on scroll
-    nav.is-small {
-        //design
-        background-color: $mediumblack;
-        
         .nav__container {
             //layout
-            height: 3em;
+            height: 5em;
+
+            //transitions
+            @include transition(height 200ms linear);
+        }
+
+        .nav__logo, .nav-list {
+            //layout
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .nav__logo {
-            //text
-            font-size: 1.4em;
+            //layout
+            left: 0;
+        }
+
+        .nav-list {
+            //layout
+            display: block !important; //override slideToggle()
+
+            right: 0;        
+            margin-top: 0em;
+        }
+
+        .nav-list__item {
+            //design
+            display: inline-block !important; //override slideToggle()
+            margin-right: 1em;
+
+            &:first-child {
+                //design
+                border: 0;
+
+                //layout
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            &:last-child {
+                //layout
+                margin-right: 0;  
+            }
+        }
+
+        .nav-list__item--a {
+            //design
+            border-radius: 4px;
+        }
+
+        .nav__hamburger {
+            //layout
+            display: none;
+        }
+
+        //shrinking nav on scroll
+        nav.is-small {
+            //design
+            background-color: $mediumblack;
+
+            .nav__container {
+                //layout
+                height: 3em;
+            }
+
+            .nav__logo {
+                //text
+                font-size: 1.4em;
+            }
         }
     }
 }

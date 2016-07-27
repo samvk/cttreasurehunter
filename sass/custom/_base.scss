@@ -37,3 +37,12 @@ a {
         text-decoration: underline;
     }
 }
+
+//hr
+.greyline {
+    //design
+    background-color: $mediumblack;
+
+    //layout
+    height: 2px;
+}
