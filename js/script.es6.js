@@ -66,7 +66,7 @@ $(document).ready(function () {
     /*********** Service buttons auto-select service type ***********/
 
     $(".service__button").click(function(){
-        let $select = $(".contact__select--service")
+        let $select = $(".contact__select--service");
         let service = $(this).data("service");
         
         $select.val(service);
@@ -76,10 +76,19 @@ $(document).ready(function () {
     /*********** Contact form placeholder text ***********/
 
     $(":input").focus(function () {
-        $(".input__placeholder").removeClass("loud")
+        $(".input__placeholder").removeClass("loud");
         $(this).siblings(".input__placeholder").addClass("is-focused").addClass("loud");
     }).blur(function () {
         $(this).siblings(".input__placeholder").removeClass("loud");
+    });
+    
+    /*********** Contact form submission ***********/
+
+    $("#contact-form").submitForm( response => {
+        $(".contact-form__submit").fadeTo(300, 0, () => {
+            $(".contact-form__submit").replaceWith(response);
+            $("#contact-form").trigger("reset").find(":input").prop("disabled", true).addClass("form--is-disabled");
+        });
     });
     
     /*************** Privacy policy modal ***************/
