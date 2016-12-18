@@ -12,7 +12,7 @@
     //center testimonies on desktop
 	@include media($md-min, "min") {
         //layout
-        transform: translateX(50% - 16.667/2); //16.667 is the image length
+        @include transform(translateX(50% - 16.667/2)); //16.667 is the image length
 	}
 }
 

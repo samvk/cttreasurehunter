@@ -40,7 +40,7 @@ textarea {
 
     //layout
     position: absolute;
-    transform: translateY(0%);
+    @include transform(translateY(0%));
     
     //transitions
     @include transition(opacity 500ms, transform 500ms);
@@ -52,7 +52,7 @@ textarea {
     opacity: 1.0;
     
     //layout
-    transform: translateY(-100%);
+    @include transform(translateY(-100%));
 }
 
 //Form states
