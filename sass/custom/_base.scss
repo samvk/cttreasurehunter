@@ -32,7 +32,7 @@ p {
 //anchor
 a {
     color: $lightgold;
-    
+
     @include hover($gold) {
         text-decoration: underline;
     }

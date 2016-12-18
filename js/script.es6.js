@@ -34,7 +34,7 @@ $(document).ready(function () {
     });
     
     /********* Navbar-related scrolling functions *********/
-    
+
     $(window).scroll(function () {
         let windowTopLine = $(window).scrollTop();
 
@@ -44,25 +44,32 @@ $(document).ready(function () {
         } else {
             $("nav").removeClass("is-small");
         }
-
-        /*********** Nav section highlighting ************/
-        $("header, body>section").each(function () {
-            let sectionTopLine = $(this).offset().top - 60;
-            let sectionBottomLine = $(this).offset().top + $(this).innerHeight() - 60;
-            let thisSectionID = "#" + $(this).attr("id");
-
-            let $myNavAnchor = $(`[href="${thisSectionID}"]`);
-
-            //If the object is  visible        
-            if (sectionTopLine < windowTopLine && windowTopLine < sectionBottomLine) {
-                $myNavAnchor.addClass("is-highlighted");
-            } else {
-                $myNavAnchor.removeClass("is-highlighted");
-            }
-        });
-
     });
-    
+
+    /*********** Check if element is in focus ************/
+    $.fn.scrollFocus = function (className) {
+        $(window).scroll( () => {
+            this.each(function () {
+                let windowTopLine = $(window).scrollTop();
+                let sectionTopLine = $(this).offset().top - 60;
+                let sectionBottomLine = $(this).offset().top + $(this).innerHeight() - 60;
+                let sectionIsFocused = sectionTopLine < windowTopLine && windowTopLine < sectionBottomLine;
+
+                let thisSectionID = "#" + $(this).attr("id");
+                let $myNavAnchor = $(`[href="${thisSectionID}"]`);
+
+                //If the element is  focused
+                if (sectionIsFocused) {
+                    $myNavAnchor.addClass(className);
+                } else {
+                    $myNavAnchor.removeClass(className);
+                }
+            });
+        });
+    };
+
+    $("header, body>section").scrollFocus("is-focused");
+
     /*********** Service buttons auto-select service type ***********/
 
     $(".service__button").click(function(){

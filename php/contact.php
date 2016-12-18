@@ -2,7 +2,7 @@
 
 error_reporting(0);
 
-//Correct serve connection test
+//Correct server connection test
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
